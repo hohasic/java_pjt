@@ -86,21 +86,14 @@ public class MainClass {
 				System.out.println("Input member PW!!");
 				memberPW = scanner.next();
 				
-				String[] searchedMember = members.get(memberID);
-				System.out.println("searchedMember: " + searchedMember);
+//				String[] searchedMember = members.get(memberID);
+				memberInfos = members.get(memberID);
+				System.out.println("searchedMember: " + memberInfos);
 				
-				if (searchedMember != null) {
-					
-					if (searchedMember[1].equals(memberPW)) {
-						// ID, PW 일치 == 로그인 성공
-						System.out.println("SIGI-IN SUCCESS!!");
-						
-					} else {
-						// PW 불일치 == 로그인 실패
-						System.out.println("SIGI-IN FAIL!!");
-						
-					}
-					
+				if (memberInfos != null && memberInfos[1].equals(memberPW)) {
+					// ID, PW 일치 == 로그인 성공
+					System.out.println("SIGI-IN SUCCESS!!");
+
 				} else {
 					// ID 불일치 == 로그인 실패
 					System.out.println("SIGI-IN FAIL!!");
@@ -142,6 +135,24 @@ public class MainClass {
 				break;
 				
 			case MENU_DELETE:			// DELETE(탈퇴)
+				
+				System.out.println("Input member ID!!");
+				memberID = scanner.next();
+				
+				System.out.println("Input member PW!!");
+				memberPW = scanner.next();
+				
+				memberInfos = members.get(memberID);
+				if (memberInfos != null && memberInfos[1].equals(memberPW)) {
+					
+					members.remove(memberID);
+					
+					System.out.println("삭제 처리 이후: " + members.get(memberID));
+					
+				} else {
+					System.out.println("존재하지 않습니다. 다시 확인하세요.");
+					
+				}
 				
 				break;
 				
