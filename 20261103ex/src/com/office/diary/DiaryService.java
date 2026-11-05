@@ -2,8 +2,6 @@ package com.office.diary;
 
 import java.util.ArrayList;
 
-import com.office.member.DiaryDto;
-
 public class DiaryService {
 
 	final private DiaryDao diaryDao;

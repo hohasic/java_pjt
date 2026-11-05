@@ -2,8 +2,6 @@ package com.office.diary;
 
 import java.util.Scanner;
 
-import com.office.member.DiaryDto;
-
 public class DiaryController implements IDiaryConfig {
 
 	final private DiaryService diaryService;

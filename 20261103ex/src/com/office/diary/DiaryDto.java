@@ -1,4 +1,4 @@
-package com.office.member;
+package com.office.diary;
 
 public class DiaryDto {
 
