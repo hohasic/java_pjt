@@ -26,13 +26,10 @@ public class HomeController {
 				break;
 				
 			case Menu.DIARY_WRITE:
-							
-				break;
-							
 			case Menu.DIARY_READ:
-				
+				Container.getInstance().getDiaryController();
 				break;
-	
+
 			case Menu.SYSTEM_OUT:
 				systemFlag = false;
 				System.out.println("Good bye~");
