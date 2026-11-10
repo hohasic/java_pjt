@@ -2,7 +2,6 @@ package com.office.diary;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 import com.office.db.DiaryDb;
 
@@ -21,13 +20,14 @@ public class DiaryDao {
 		
 		ArrayList<DiaryDto> myDiaries = diaries.get(memId);
 		
-		if (myDiaries == null)
+		if (myDiaries == null) {
 			myDiaries = new ArrayList<DiaryDto>();
+			diaries.put(memId, myDiaries);
+		}
 
 		int beforSize = myDiaries.size();
 		myDiaries.add(0, diaryDto);
 		int afterSize = myDiaries.size();
-
 		
 		return afterSize - beforSize >= 1 
 				? 
