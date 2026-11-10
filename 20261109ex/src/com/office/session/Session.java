@@ -20,8 +20,8 @@ public class Session {
 		
 	}
 
-	public HashMap<String, Object> getAttributies() {
-		return attributies;
+	public Object getAttribute(String name) {
+		return attributies.get(name);
 		
 	}
 	
@@ -32,6 +32,7 @@ public class Session {
 	
 	public void removeAttribute(String name) {
 		attributies.remove(name);
+		
 	}
 
 }
